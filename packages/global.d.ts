@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 
 // Global compile-time constants
+// 全局编译时常量
 declare var __DEV__: boolean
 declare var __TEST__: boolean
 declare var __BROWSER__: boolean

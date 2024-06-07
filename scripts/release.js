@@ -145,6 +145,8 @@ async function main() {
         ['view', `${pkgName}@~${canaryVersion}`, 'version', '--json'],
         { stdio: 'pipe' },
       )
+      // eslint-disable-next-line @typescript-eslint/prefer-ts-expect-error
+      /**@ts-ignore */
       let versions = JSON.parse(stdout)
       versions = Array.isArray(versions) ? versions : [versions]
       const latestSameDayPatch = /** @type {string} */ (
